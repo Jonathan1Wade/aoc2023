@@ -7,17 +7,12 @@ def translate(line):
 
 with open('Day1/input.txt', 'r') as file:
     lines = file.readlines()
-    #total1 = 0
-    total2 = 0
+    total = 0
     for line in lines:
-       # digits = [char for char in line if char.isnumeric()]
-       # if digits:
-       #     total1 += int(digits[0]+digits[-1])
-
         digits = [char for char in translate(line) if char.isnumeric()]
         if digits:
-            total2 += int(digits[0]+digits[-1])
+            total += int(digits[0]+digits[-1])
         
-    print(total2)
+    print(total)
         
 
